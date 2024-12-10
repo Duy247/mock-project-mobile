@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2024-12-10T17:13:21.019155" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="c:\Users\duy5a\Downloads\mock-project-mobile\test\test.robot">
+<test id="s1-t1" name="[TC_03] Delete Contact And Delete Conversation" line="9">
+<kw name="[STEP_01] Open Contact App">
+<kw name="Open Contact App" owner="main">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>appPackage=${CONTACT_APP_PACKAGE}</arg>
+<arg>appActivity=${CONTACT_APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-10T17:13:21.202207" elapsed="9.691259"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:21.201220" elapsed="9.692246"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:21.200233" elapsed="9.693233"/>
+</kw>
+<kw name="[STEP_02] Select The Contact">
+<kw name="Click First Contact" owner="main">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:33.220723" level="INFO">xpath criteria: //android.widget.TextView[@content-desc='A1']</msg>
+<arg>xpath=${first_contact}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-12-10T17:13:30.894464" elapsed="2.327245"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:33.222707" level="INFO">Clicking element 'xpath=//android.widget.TextView[@content-desc='A1']'.</msg>
+<msg time="2024-12-10T17:13:33.688996" level="INFO">xpath criteria: //android.widget.TextView[@content-desc='A1']</msg>
+<arg>xpath=${first_contact}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-10T17:13:33.221709" elapsed="0.468280"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:30.894464" elapsed="2.795525"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:30.894464" elapsed="2.795525"/>
+</kw>
+<kw name="[STEP_03] Select Delete Contact">
+<kw name="Click More Option" owner="contact">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:34.283447" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc='More options']</msg>
+<arg>xpath=${more_option}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-12-10T17:13:33.692993" elapsed="0.590454"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:34.285442" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc='More options']'.</msg>
+<msg time="2024-12-10T17:13:35.332431" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc='More options']</msg>
+<arg>xpath=${more_option}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-10T17:13:34.283447" elapsed="1.049949"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:33.692993" elapsed="1.641426"/>
+</kw>
+<kw name="Click Delete Contact Option" owner="contact">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:35.781877" level="INFO">xpath criteria: //android.widget.TextView[@resource-id='com.samsung.android.contacts:id/title' and @text='Delete']</msg>
+<arg>xpath=${delete_contact_option}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-12-10T17:13:35.336381" elapsed="0.445496"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:35.782905" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id='com.samsung.android.contacts:id/title' and @text='Delete']'.</msg>
+<msg time="2024-12-10T17:13:37.767903" level="INFO">xpath criteria: //android.widget.TextView[@resource-id='com.samsung.android.contacts:id/title' and @text='Delete']</msg>
+<arg>xpath=${delete_contact_option}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-10T17:13:35.781877" elapsed="1.986026"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:35.335387" elapsed="2.433511"/>
+</kw>
+<kw name="Click Confirm Delete Button" owner="contact">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:37.941737" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.samsung.android.contacts:id/button1']</msg>
+<arg>xpath=${confirm_delete_button}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-12-10T17:13:37.770884" elapsed="0.170853"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:37.942732" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id='com.samsung.android.contacts:id/button1']'.</msg>
+<msg time="2024-12-10T17:13:38.123255" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.samsung.android.contacts:id/button1']</msg>
+<arg>xpath=${confirm_delete_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-10T17:13:37.941737" elapsed="0.182484"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:37.769886" elapsed="0.355378"/>
+</kw>
+<kw name="Verify Contact Deleted" owner="main">
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2024-12-10T17:13:38.681250" level="INFO">Current page not contains element 'xpath=//android.widget.TextView[@content-desc='A1']'.</msg>
+<msg time="2024-12-10T17:13:38.681250" level="INFO">xpath criteria: //android.widget.TextView[@content-desc='A1']</msg>
+<arg>xpath=${first_contact}</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2024-12-10T17:13:38.126255" elapsed="0.554995"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:38.125264" elapsed="0.555986"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:33.691959" elapsed="4.989291"/>
+</kw>
+<status status="PASS" start="2024-12-10T17:13:21.199214" elapsed="17.483004"/>
+</test>
+<status status="PASS" start="2024-12-10T17:13:21.023144" elapsed="17.661069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
