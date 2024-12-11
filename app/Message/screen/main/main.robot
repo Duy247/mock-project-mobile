@@ -15,6 +15,9 @@ Go To Message App
     ...    automationName=${ANDROID_AUTOMATION_NAME}    
     ...    appPackage=${message_app_package}    appActivity=${message_app_activity}   
 
+Verify Message App Opened
+    Wait Until Page Contains    Messages
+    
 Create New Conversation
     Wait Until Element Is Visible    xpath=${create_new_message}
     Click Element    xpath=${create_new_message}

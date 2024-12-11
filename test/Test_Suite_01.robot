@@ -10,6 +10,8 @@ Resource    ../app//Message/screen/message/message.robot
 [TC_01] Create New Contact
     # [STEP_01] Open Contact App
     Go To Contact App
+    Verify Contact App Opened
+
     # [STEP_02] Add New Contact
     Click Add Contact
     Click Save To Phone
@@ -25,6 +27,7 @@ Resource    ../app//Message/screen/message/message.robot
 [TC_02] Create Conversation
     # [STEP_01] Open Message App
     Go To Message App
+    Verify Message App Opened
     
     # [STEP_02] New Conversation
     Create New Conversation
@@ -43,6 +46,7 @@ Resource    ../app//Message/screen/message/message.robot
 [TC_03] Delete Contact And Delete Conversation
     # [STEP_01] Open Contact App
     Go To Contact App
+    Verify Contact App Opened
     
     # [STEP_02] Select The Contact
     Click Created Contact
@@ -55,6 +59,7 @@ Resource    ../app//Message/screen/message/message.robot
     
     # [STEP_04] Open Message App
     Go To Message App
+    Verify Message App Opened
     
     # [STEP_05] Delete Conversation
     Click Created Message

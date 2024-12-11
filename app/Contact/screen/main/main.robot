@@ -15,6 +15,9 @@ Go To Contact App
     ...    automationName=${ANDROID_AUTOMATION_NAME}    
     ...    appPackage=${contact_app_package}    appActivity=${contact_app_activity}   
 
+Verify Contact App Opened
+    Wait Until Page Contains    contact
+
 Click Add Contact
     Wait Until Element Is Visible    xpath=${add_contact_button}    timeout=10s
     Click Element    xpath=${add_contact_button}
