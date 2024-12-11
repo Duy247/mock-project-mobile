@@ -1,10 +1,10 @@
 *** Settings ***
 Library    AppiumLibrary
-Resource    ../Contact/screen/main/main.robot
-Resource    ../Contact/screen/contact/contact.robot
-Resource    ../Contact/screen/add_contact/add_contact.robot
-Resource    ../Message/screen/main/main.robot  
-Resource    ../Message/screen/message/message.robot
+Resource    ../app/Contact/screen/main/main.robot
+Resource    ../app/Contact/screen/contact/contact.robot
+Resource    ../app/Contact/screen/add_contact/add_contact.robot
+Resource    ../app/Message/screen/main/main.robot  
+Resource    ../app//Message/screen/message/message.robot
 
 *** Test Cases ***
 [TC_01] Create New Contact
@@ -31,6 +31,7 @@ Resource    ../Message/screen/message/message.robot
     
     # [STEP_03] Select Created Contact
     Input Recipient 0123456
+    Verify Recipient Named A1
     
     # [STEP_04] Input Message
     Input Text For Message    Hello
