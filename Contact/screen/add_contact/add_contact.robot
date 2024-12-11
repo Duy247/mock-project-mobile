@@ -6,7 +6,6 @@ Variables    ../../locator/add_contact/add_contact_loc.py
 Input Name A1
     Wait Until Element Is Visible    xpath=${name_input}   timeout=10s
     Input Text    xpath=${name_input}    A1
-    Hide Keyboard
 
 Input Phone 0123456
     Wait Until Element Is Visible    xpath=${phone_holder}   timeout=10s
