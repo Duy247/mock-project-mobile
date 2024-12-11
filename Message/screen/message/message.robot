@@ -3,7 +3,7 @@ Library    AppiumLibrary
 Variables    ../../locator/message/message_loc.py
 
 *** Keywords ***
-Input Number 0123456
+Input Recipient 0123456
     Wait Until Element Is Visible    xpath=${recipient_field}
     Input Text    xpath=${recipient_field}    0123456
     Wait Until Element Is Visible    xpath=${contact_search_result}

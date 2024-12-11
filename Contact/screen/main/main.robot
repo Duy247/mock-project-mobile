@@ -25,10 +25,10 @@ Click Save To Phone
     Wait Until Element Is Visible    xpath=${set_save_button}    timeout=10s
     Click Element    xpath=${set_save_button}
 
-Click First Contact
-    Wait Until Element Is Visible    xpath=${first_contact}    timeout=10s
-    Click Element    xpath=${first_contact}
+Click Created Contact
+    Wait Until Element Is Visible    xpath=${created_contact}    timeout=10s
+    Click Element    xpath=${created_contact}
     
 Verify Contact Deleted
-    Page Should Not Contain Element    xpath=${first_contact}
+    Page Should Not Contain Element    xpath=${created_contact}
 
