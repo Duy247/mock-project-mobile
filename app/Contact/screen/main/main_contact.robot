@@ -32,12 +32,11 @@ Click Save To Phone
 
 Click Created Contact
     [Arguments]    ${contact}
-    Set Global Variable    ${CONTACT_NAME}    ${contact}
-    ${created_contact}    Set Variable    //*[@content-desc='${contact}']   
-    Wait Until Element Is Visible    ${created_contact}    timeout=10s
-    Click Element    ${created_contact}
+    ${created_contact_loc}    Set Variable    //*[@content-desc='${contact}']
+    Set Global Variable    ${CONTACT_LOC}    ${created_contact_loc}
+    Wait Until Element Is Visible    ${created_contact_loc}    timeout=10s
+    Click Element    ${created_contact_loc}
     
 Verify Contact Deleted
-    ${created_contact}    Set Variable    //*[@content-desc='${CONTACT_NAME}']
-    Page Should Not Contain Element    ${created_contact}
+    Page Should Not Contain Element    ${CONTACT_LOC}
 

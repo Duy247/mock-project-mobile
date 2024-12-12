@@ -1,7 +1,7 @@
 *** Settings ***                                                
 Library    AppiumLibrary
 Variables    ../../locator/main/main_message_loc.py
-Library    ../../locator/main/main_message_dynamic_loc.py
+Library    ../../utils/main/main_message_utils.py
 
 *** Variables ***
 ${APPIUM_URL}    http://127.0.0.1:4723
@@ -27,12 +27,12 @@ Create New Conversation
 
 Click Created Message By Number
     [Arguments]    ${num}
-    Set Global Variable    ${NUMBER}    ${num}
-    ${created_message_by_number} =    Get Message By Number    ${num}
-    Wait Until Element Is Visible    ${created_message_by_number}    timeout=10s
-    Click Element    ${created_message_by_number}
+    ${formatted_number} =    Format Number    ${num}    
+    ${created_message_loc}    Set Variable    //*[@content-desc='${formatted_number}']
+    Set Global Variable    ${CREATED_MESSAGE_LOC}    ${created_message_loc}
+    Wait Until Element Is Visible    ${created_message_loc}    timeout=10s
+    Click Element    ${created_message_loc}
 
 Verify Message Deleted
-    ${created_message_by_number} =    Get Message By Number    ${NUMBER}
     Sleep    5s
-    Page Should Not Contain Element    ${created_message_by_number}
+    Page Should Not Contain Element    ${CREATED_MESSAGE_LOC}

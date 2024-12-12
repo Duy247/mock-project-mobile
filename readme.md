@@ -21,3 +21,5 @@ Update 3: Rewrite test case 1 & 2 for Samsung A7 2018 Android 9
 Update 4: Merge 3 robot file into 1 single test suite
 
 Update 5: Add dynamic locator for created contact and message
+
+Update 6: Move Variable to JSON file

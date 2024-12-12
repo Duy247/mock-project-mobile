@@ -1,16 +1,23 @@
 *** Settings ***
 Library    AppiumLibrary
+Library    JSONLibrary
+Library    robot.utils
 Resource    ../app/Contact/screen/main/main_contact.robot
 Resource    ../app/Contact/screen/contact/contact.robot
 Resource    ../app/Contact/screen/add_contact/add_contact.robot
 Resource    ../app/Message/screen/main/main_message.robot  
 Resource    ../app//Message/screen/message/message.robot
 
-*** Variables ***   
-${CONTACT_NAME}    Lam Oanh
-${CONTACT_NUM}    0123456
-${SEND_MESSAGE}    Hello Oanh
+Suite Setup    Load Variable Data
 
+*** Keywords ***
+Load Variable Data
+    ${ABS_PATH} =     Abspath    data/test_data.json
+    ${DATA}    Load Json From File    ${ABS_PATH}
+    Set Suite Variable    ${CONTACT_NAME}    ${DATA}[name]
+    Set Suite Variable    ${CONTACT_NUM}    ${DATA}[number]
+    Set Suite Variable    ${SEND_MESSAGE}    ${DATA}[message]
+    
 *** Test Cases ***
 [TC_01] Create New Contact
     # [STEP_01] Open Contact App
@@ -21,7 +28,7 @@ ${SEND_MESSAGE}    Hello Oanh
     Click Add Contact
     Click Save To Phone
 
-    # [STEP 03] Input Name "A1" and Phone "0123456"
+    # [STEP 03] Input Name and Phone 
     Input Name    ${CONTACT_NAME}
     Input Phone    ${CONTACT_NUM}
 

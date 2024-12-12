@@ -21,7 +21,7 @@ Click Save
 
 Verify Contact Added
     [Arguments]    ${name_check}    ${phone_check}
-    ${contact_name}    Set Variable    //*[contains(@resource-id,'header') and @text='${name_check}']
-    ${contact_phone}    Set Variable    //*[contains(@resource-id,'display_number') and @text='${phone_check}']
-    Wait Until Element Is Visible    ${contact_name}
-    Wait Until Element Is Visible    ${contact_phone}
+    ${contact_name_loc}    Set Variable    //*[contains(@resource-id,'header') and @text='${name_check}']
+    ${contact_phone_loc}    Set Variable    //*[contains(@resource-id,'display_number') and @text='${phone_check}']
+    Wait Until Element Is Visible    ${contact_name_loc}
+    Wait Until Element Is Visible    ${contact_phone_loc}
