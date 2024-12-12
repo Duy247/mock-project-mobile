@@ -1,7 +1,6 @@
 *** Settings ***                                                                            
 Library    AppiumLibrary
 Variables    ../../locator/main/main_contact_loc.py
-Library    ../../locator/main/main_contact_dynamic_loc.py
 
 *** Variables ***
 ${APPIUM_URL}    http://127.0.0.1:4723
@@ -34,11 +33,11 @@ Click Save To Phone
 Click Created Contact
     [Arguments]    ${contact}
     Set Global Variable    ${CONTACT_NAME}    ${contact}
-    ${created_contact} =    Get Created Contact    ${contact}    
+    ${created_contact}    Set Variable    //*[@content-desc='${contact}']   
     Wait Until Element Is Visible    ${created_contact}    timeout=10s
     Click Element    ${created_contact}
     
 Verify Contact Deleted
-    ${created_contact} =    Get Created Contact    ${CONTACT_NAME} 
+    ${created_contact}    Set Variable    //*[@content-desc='${CONTACT_NAME}']
     Page Should Not Contain Element    ${created_contact}
 

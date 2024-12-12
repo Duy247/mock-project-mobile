@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-12T08:49:09.951504" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-12T14:46:25.454822" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Suite 01" source="c:\Users\Duy Van\Downloads\mock-project-mobile\test\Test_Suite_01.robot">
 <test id="s1-t1" name="[TC_01] Create New Contact" line="15">
 <kw name="Go To Contact App" owner="main_contact">
@@ -9,8 +9,8 @@
 <arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
-<arg>appPackage=${contact_app_package}</arg>
-<arg>appActivity=${contact_app_activity}</arg>
+<arg>appPackage=${CONTACT_APP_PACKAGE}</arg>
+<arg>appActivity=${CONTACT_APP_ACTIVITY}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.1/cli/args/
@@ -18,167 +18,168 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-12-12T08:49:10.292879" elapsed="10.041897"/>
+<status status="PASS" start="2024-12-12T14:46:25.874845" elapsed="8.634613"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:10.292879" elapsed="10.041897"/>
+<status status="PASS" start="2024-12-12T14:46:25.863393" elapsed="8.646065"/>
 </kw>
 <kw name="Verify Contact App Opened" owner="main_contact">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>contact</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:49:20.334776" elapsed="1.752052"/>
+<status status="PASS" start="2024-12-12T14:46:34.514610" elapsed="1.769882"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:20.334776" elapsed="1.752052"/>
+<status status="PASS" start="2024-12-12T14:46:34.509458" elapsed="1.775034"/>
 </kw>
 <kw name="Click Add Contact" owner="main_contact">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:23.167502" level="INFO">xpath criteria: //*[@content-desc='Create contact']</msg>
+<msg time="2024-12-12T14:46:37.373572" level="INFO">xpath criteria: //*[@content-desc='Create contact']</msg>
 <arg>${add_contact_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:22.086828" elapsed="1.086708"/>
+<status status="PASS" start="2024-12-12T14:46:36.284492" elapsed="1.089080"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:23.173536" level="INFO">Clicking element '//*[@content-desc='Create contact']'.</msg>
-<msg time="2024-12-12T08:49:23.553417" level="INFO">xpath criteria: //*[@content-desc='Create contact']</msg>
+<msg time="2024-12-12T14:46:37.373572" level="INFO">Clicking element '//*[@content-desc='Create contact']'.</msg>
+<msg time="2024-12-12T14:46:37.754558" level="INFO">xpath criteria: //*[@content-desc='Create contact']</msg>
 <arg>${add_contact_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:23.173536" elapsed="0.379881"/>
+<status status="PASS" start="2024-12-12T14:46:37.373572" elapsed="0.380986"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:22.086828" elapsed="1.466589"/>
+<status status="PASS" start="2024-12-12T14:46:36.284492" elapsed="1.470066"/>
 </kw>
 <kw name="Click Save To Phone" owner="main_contact">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:25.013803" level="INFO">xpath criteria: //*[@resource-id='android:id/text1' and @text='Phone']
+<msg time="2024-12-12T14:46:39.184875" level="INFO">xpath criteria: //*[@resource-id='android:id/text1' and @text='Phone']
 xpath criteria: //*[@resource-id='android:id/text1' and @text='Phone']</msg>
 <arg>${save_to_phone}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:23.553417" elapsed="1.460386"/>
+<status status="PASS" start="2024-12-12T14:46:37.759566" elapsed="1.425309"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:25.018080" level="INFO">Clicking element '//*[@resource-id='android:id/text1' and @text='Phone']'.</msg>
-<msg time="2024-12-12T08:49:25.986060" level="INFO">xpath criteria: //*[@resource-id='android:id/text1' and @text='Phone']</msg>
+<msg time="2024-12-12T14:46:39.184875" level="INFO">Clicking element '//*[@resource-id='android:id/text1' and @text='Phone']'.</msg>
+<msg time="2024-12-12T14:46:39.483640" level="INFO">xpath criteria: //*[@resource-id='android:id/text1' and @text='Phone']</msg>
 <arg>${save_to_phone}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:25.013803" elapsed="0.979859"/>
+<status status="PASS" start="2024-12-12T14:46:39.184875" elapsed="0.298765"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:26.292985" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
+<msg time="2024-12-12T14:46:40.431902" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
 <arg>${set_save_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:25.993662" elapsed="0.299323"/>
+<status status="PASS" start="2024-12-12T14:46:39.483640" elapsed="0.948262"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:26.292985" level="INFO">Clicking element '//*[contains(@resource-id,'button1')]'.</msg>
-<msg time="2024-12-12T08:49:26.574274" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
+<msg time="2024-12-12T14:46:40.431902" level="INFO">Clicking element '//*[contains(@resource-id,'button1')]'.</msg>
+<msg time="2024-12-12T14:46:40.704524" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
 <arg>${set_save_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:26.292985" elapsed="0.281289"/>
+<status status="PASS" start="2024-12-12T14:46:40.431902" elapsed="0.272622"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:23.553417" elapsed="3.020857"/>
+<status status="PASS" start="2024-12-12T14:46:37.759566" elapsed="2.944958"/>
 </kw>
 <kw name="Input Name" owner="add_contact">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:28.517655" level="INFO">xpath criteria: //*[contains(@resource-id,'nameEdit')]</msg>
+<msg time="2024-12-12T14:46:42.644002" level="INFO">xpath criteria: //*[contains(@resource-id,'nameEdit')]</msg>
 <arg>${name_input}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:26.585603" elapsed="1.932052"/>
+<status status="PASS" start="2024-12-12T14:46:40.714516" elapsed="1.929486"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:28.517655" level="INFO">Typing text 'A1' into text field '//*[contains(@resource-id,'nameEdit')]'</msg>
-<msg time="2024-12-12T08:49:29.643718" level="INFO">xpath criteria: //*[contains(@resource-id,'nameEdit')]</msg>
+<msg time="2024-12-12T14:46:42.644002" level="INFO">Typing text 'Lam Oanh' into text field '//*[contains(@resource-id,'nameEdit')]'</msg>
+<msg time="2024-12-12T14:46:43.723795" level="INFO">xpath criteria: //*[contains(@resource-id,'nameEdit')]</msg>
 <arg>${name_input}</arg>
 <arg>${name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:28.517655" elapsed="1.126063"/>
+<status status="PASS" start="2024-12-12T14:46:42.644002" elapsed="1.079793"/>
 </kw>
 <arg>${CONTACT_NAME}</arg>
-<status status="PASS" start="2024-12-12T08:49:26.583655" elapsed="3.066572"/>
+<status status="PASS" start="2024-12-12T14:46:40.713974" elapsed="3.009821"/>
 </kw>
 <kw name="Input Phone" owner="add_contact">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:30.553668" level="INFO">xpath criteria: //android.widget.TextView[@text='Phone']</msg>
+<msg time="2024-12-12T14:46:44.643944" level="INFO">xpath criteria: //android.widget.TextView[@text='Phone']</msg>
 <arg>${phone_holder}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:29.653762" elapsed="0.899906"/>
+<status status="PASS" start="2024-12-12T14:46:43.731882" elapsed="0.912062"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:30.553668" level="INFO">Clicking element '//android.widget.TextView[@text='Phone']'.</msg>
-<msg time="2024-12-12T08:49:30.849713" level="INFO">xpath criteria: //android.widget.TextView[@text='Phone']</msg>
+<msg time="2024-12-12T14:46:44.654632" level="INFO">Clicking element '//android.widget.TextView[@text='Phone']'.</msg>
+<msg time="2024-12-12T14:46:44.974717" level="INFO">xpath criteria: //android.widget.TextView[@text='Phone']</msg>
 <arg>${phone_holder}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:30.553668" elapsed="0.296556"/>
+<status status="PASS" start="2024-12-12T14:46:44.652107" elapsed="0.322610"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:32.173622" level="INFO">xpath criteria: //android.widget.EditText[@text='Phone']</msg>
+<msg time="2024-12-12T14:46:46.325100" level="INFO">xpath criteria: //android.widget.EditText[@text='Phone']</msg>
 <arg>${phone_input}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:30.850350" elapsed="1.323272"/>
+<status status="PASS" start="2024-12-12T14:46:44.974717" elapsed="1.350383"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:32.184096" level="INFO">Typing text '0123456' into text field '//android.widget.EditText[@text='Phone']'</msg>
-<msg time="2024-12-12T08:49:33.173983" level="INFO">xpath criteria: //android.widget.EditText[@text='Phone']</msg>
+<msg time="2024-12-12T14:46:46.334706" level="INFO">Typing text '0123456' into text field '//android.widget.EditText[@text='Phone']'</msg>
+<msg time="2024-12-12T14:46:47.343360" level="INFO">xpath criteria: //android.widget.EditText[@text='Phone']</msg>
 <arg>${phone_input}</arg>
 <arg>${phone_num}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:32.173622" elapsed="1.000361"/>
+<status status="PASS" start="2024-12-12T14:46:46.325100" elapsed="1.018260"/>
 </kw>
 <arg>${CONTACT_NUM}</arg>
-<status status="PASS" start="2024-12-12T08:49:29.653762" elapsed="3.520221"/>
+<status status="PASS" start="2024-12-12T14:46:43.731882" elapsed="3.611478"/>
 </kw>
 <kw name="Click Save" owner="add_contact">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:34.093855" level="INFO">xpath criteria: //*[@content-desc='Save']</msg>
+<msg time="2024-12-12T14:46:48.254922" level="INFO">xpath criteria: //*[@content-desc='Save']</msg>
 <arg>${save_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:33.173983" elapsed="0.919872"/>
+<status status="PASS" start="2024-12-12T14:46:47.343360" elapsed="0.911562"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:34.100452" level="INFO">Clicking element '//*[@content-desc='Save']'.</msg>
-<msg time="2024-12-12T08:49:34.373643" level="INFO">xpath criteria: //*[@content-desc='Save']</msg>
+<msg time="2024-12-12T14:46:48.254922" level="INFO">Clicking element '//*[@content-desc='Save']'.</msg>
+<msg time="2024-12-12T14:46:48.543822" level="INFO">xpath criteria: //*[@content-desc='Save']</msg>
 <arg>${save_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:34.093855" elapsed="0.279788"/>
+<status status="PASS" start="2024-12-12T14:46:48.254922" elapsed="0.288900"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:33.173983" elapsed="1.199660"/>
+<status status="PASS" start="2024-12-12T14:46:47.343360" elapsed="1.200462"/>
 </kw>
 <kw name="Verify Contact Added" owner="add_contact">
-<kw name="Get Contact Name" owner="add_contact_dynamic_loc">
-<msg time="2024-12-12T08:49:34.373643" level="INFO">${contact_name} = //*[contains(@resource-id,'header') and @text='A1']</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-12T14:46:48.543822" level="INFO">${contact_name} = //*[contains(@resource-id,'header') and @text='Lam Oanh']</msg>
 <var>${contact_name}</var>
-<arg>${name_check}</arg>
-<status status="PASS" start="2024-12-12T08:49:34.373643" elapsed="0.000000"/>
+<arg>//*[contains(@resource-id,'header') and @text='${name_check}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-12T14:46:48.543822" elapsed="0.000000"/>
 </kw>
-<kw name="Get Contact Phone" owner="add_contact_dynamic_loc">
-<msg time="2024-12-12T08:49:34.373643" level="INFO">${contact_phone} = //*[contains(@resource-id,'display_number') and @text='0123456']</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-12T14:46:48.543822" level="INFO">${contact_phone} = //*[contains(@resource-id,'display_number') and @text='0123456']</msg>
 <var>${contact_phone}</var>
-<arg>${phone_check}</arg>
-<status status="PASS" start="2024-12-12T08:49:34.373643" elapsed="0.000000"/>
+<arg>//*[contains(@resource-id,'display_number') and @text='${phone_check}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-12T14:46:48.543822" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:36.284232" level="INFO">xpath criteria: //*[contains(@resource-id,'header') and @text='A1']
-xpath criteria: //*[contains(@resource-id,'header') and @text='A1']</msg>
+<msg time="2024-12-12T14:46:50.403788" level="INFO">xpath criteria: //*[contains(@resource-id,'header') and @text='Lam Oanh']</msg>
 <arg>${contact_name}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:34.373643" elapsed="1.910589"/>
+<status status="PASS" start="2024-12-12T14:46:48.543822" elapsed="1.859966"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:36.504326" level="INFO">xpath criteria: //*[contains(@resource-id,'display_number') and @text='0123456']</msg>
+<msg time="2024-12-12T14:46:50.624511" level="INFO">xpath criteria: //*[contains(@resource-id,'display_number') and @text='0123456']</msg>
 <arg>${contact_phone}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:36.284232" elapsed="0.220094"/>
+<status status="PASS" start="2024-12-12T14:46:50.403788" elapsed="0.220723"/>
 </kw>
 <arg>${CONTACT_NAME}</arg>
 <arg>${CONTACT_NUM}</arg>
-<status status="PASS" start="2024-12-12T08:49:34.373643" elapsed="2.130683"/>
+<status status="PASS" start="2024-12-12T14:46:48.543822" elapsed="2.080689"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:10.285516" elapsed="26.218810"/>
+<status status="PASS" start="2024-12-12T14:46:25.863393" elapsed="24.761118"/>
 </test>
 <test id="s1-t2" name="[TC_02] Create Conversation" line="32">
 <kw name="Go To Message App" owner="main_message">
@@ -188,8 +189,8 @@ xpath criteria: //*[contains(@resource-id,'header') and @text='A1']</msg>
 <arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
-<arg>appPackage=${message_app_package}</arg>
-<arg>appActivity=${message_app_activity}</arg>
+<arg>appPackage=${MESSAGE_APP_PACKAGE}</arg>
+<arg>appActivity=${MESSAGE_APP_ACTIVITY}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.1/cli/args/
@@ -197,126 +198,125 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-12-12T08:49:36.513582" elapsed="11.919754"/>
+<status status="PASS" start="2024-12-12T14:46:50.634920" elapsed="12.069197"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:36.513582" elapsed="11.919754"/>
+<status status="PASS" start="2024-12-12T14:46:50.634920" elapsed="12.077390"/>
 </kw>
 <kw name="Verify Message App Opened" owner="main_message">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>Messages</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:49:48.433336" elapsed="1.950002"/>
+<status status="PASS" start="2024-12-12T14:47:02.712310" elapsed="1.822278"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:48.433336" elapsed="1.950002"/>
+<status status="PASS" start="2024-12-12T14:47:02.712310" elapsed="1.822278"/>
 </kw>
 <kw name="Create New Conversation" owner="main_message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:51.463817" level="INFO">xpath criteria: //*[@content-desc='Compose new message']</msg>
+<msg time="2024-12-12T14:47:05.800612" level="INFO">xpath criteria: //*[@content-desc='Compose new message']</msg>
 <arg>${create_new_message}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:50.383338" elapsed="1.080479"/>
+<status status="PASS" start="2024-12-12T14:47:04.534588" elapsed="1.266024"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:51.473785" level="INFO">Clicking element '//*[@content-desc='Compose new message']'.</msg>
-<msg time="2024-12-12T08:49:52.247871" level="INFO">xpath criteria: //*[@content-desc='Compose new message']</msg>
+<msg time="2024-12-12T14:47:05.804634" level="INFO">Clicking element '//*[@content-desc='Compose new message']'.</msg>
+<msg time="2024-12-12T14:47:07.303742" level="INFO">xpath criteria: //*[@content-desc='Compose new message']</msg>
 <arg>${create_new_message}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:51.463817" elapsed="0.784054"/>
+<status status="PASS" start="2024-12-12T14:47:05.800612" elapsed="1.503130"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:50.383338" elapsed="1.864533"/>
+<status status="PASS" start="2024-12-12T14:47:04.534588" elapsed="2.769154"/>
 </kw>
 <kw name="Input Recipient Number" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:54.643932" level="INFO">xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]
-xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]</msg>
+<msg time="2024-12-12T14:47:09.226883" level="INFO">xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]</msg>
 <arg>${recipient_field}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:52.253387" elapsed="2.390545"/>
+<status status="PASS" start="2024-12-12T14:47:07.314637" elapsed="1.912246"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:54.647681" level="INFO">Typing text '0123456' into text field '//*[contains(@resource-id,'recipients_editor_to')]'</msg>
-<msg time="2024-12-12T08:49:55.833477" level="INFO">xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]</msg>
+<msg time="2024-12-12T14:47:09.228923" level="INFO">Typing text '0123456' into text field '//*[contains(@resource-id,'recipients_editor_to')]'</msg>
+<msg time="2024-12-12T14:47:10.580789" level="INFO">xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]</msg>
 <arg>${recipient_field}</arg>
 <arg>${recipient_num}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:54.643932" elapsed="1.189545"/>
+<status status="PASS" start="2024-12-12T14:47:09.226883" elapsed="1.353906"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:56.973520" level="INFO">xpath criteria: //*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout</msg>
+<msg time="2024-12-12T14:47:11.706373" level="INFO">xpath criteria: //*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout</msg>
 <arg>${contact_search_result}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:55.833477" elapsed="1.140043"/>
+<status status="PASS" start="2024-12-12T14:47:10.580789" elapsed="1.125584"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:56.973520" level="INFO">Clicking element '//*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout'.</msg>
-<msg time="2024-12-12T08:49:58.713801" level="INFO">xpath criteria: //*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout</msg>
+<msg time="2024-12-12T14:47:11.714600" level="INFO">Clicking element '//*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout'.</msg>
+<msg time="2024-12-12T14:47:13.454957" level="INFO">xpath criteria: //*[contains(@resource-id,'bubble_list_view')]/android.widget.LinearLayout</msg>
 <arg>${contact_search_result}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:56.973520" elapsed="1.740281"/>
+<status status="PASS" start="2024-12-12T14:47:11.706373" elapsed="1.748584"/>
 </kw>
 <arg>${CONTACT_NUM}</arg>
-<status status="PASS" start="2024-12-12T08:49:52.253387" elapsed="6.460414"/>
+<status status="PASS" start="2024-12-12T14:47:07.312038" elapsed="6.142919"/>
 </kw>
 <kw name="Verify Recipient Named" owner="message">
 <kw name="Page Should Contain Text" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:59.293178" level="INFO">Current page contains text 'A1'.</msg>
+<msg time="2024-12-12T14:47:13.994709" level="INFO">Current page contains text 'Lam Oanh'.</msg>
 <arg>${recipient_name}</arg>
 <doc>Verifies that current page contains `text`.</doc>
-<status status="PASS" start="2024-12-12T08:49:58.713801" elapsed="0.583479"/>
+<status status="PASS" start="2024-12-12T14:47:13.464420" elapsed="0.530289"/>
 </kw>
 <arg>${CONTACT_NAME}</arg>
-<status status="PASS" start="2024-12-12T08:49:58.713801" elapsed="0.583479"/>
+<status status="PASS" start="2024-12-12T14:47:13.464420" elapsed="0.530289"/>
 </kw>
 <kw name="Input Text For Message" owner="message">
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-12-12T08:49:59.297280" level="INFO">${MESSAGE_SENT} = Hello</msg>
+<msg time="2024-12-12T14:47:14.003664" level="INFO">${MESSAGE_SENT} = Hello Oanh</msg>
 <arg>${MESSAGE_SENT}</arg>
 <arg>${message}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-12-12T08:49:59.297280" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-12T14:47:13.994709" elapsed="0.008955"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:59.713665" level="INFO">xpath criteria: //*[@resource-id='com.samsung.android.messaging:id/message_edit_text']</msg>
+<msg time="2024-12-12T14:47:14.511785" level="INFO">xpath criteria: //*[@resource-id='com.samsung.android.messaging:id/message_edit_text']</msg>
 <arg>${message_field}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:49:59.297280" elapsed="0.416385"/>
+<status status="PASS" start="2024-12-12T14:47:14.003664" elapsed="0.508121"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-12-12T08:49:59.723643" level="INFO">Typing text 'Hello' into text field '//*[@resource-id='com.samsung.android.messaging:id/message_edit_text']'</msg>
-<msg time="2024-12-12T08:50:00.653545" level="INFO">xpath criteria: //*[@resource-id='com.samsung.android.messaging:id/message_edit_text']</msg>
+<msg time="2024-12-12T14:47:14.511785" level="INFO">Typing text 'Hello Oanh' into text field '//*[@resource-id='com.samsung.android.messaging:id/message_edit_text']'</msg>
+<msg time="2024-12-12T14:47:15.394560" level="INFO">xpath criteria: //*[@resource-id='com.samsung.android.messaging:id/message_edit_text']</msg>
 <arg>${message_field}</arg>
 <arg>${message}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:49:59.713665" elapsed="0.939880"/>
+<status status="PASS" start="2024-12-12T14:47:14.511785" elapsed="0.882775"/>
 </kw>
 <arg>${SEND_MESSAGE}</arg>
-<status status="PASS" start="2024-12-12T08:49:59.297280" elapsed="1.356265"/>
+<status status="PASS" start="2024-12-12T14:47:13.994709" elapsed="1.399851"/>
 </kw>
 <kw name="Click Send Button" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:01.430397" level="INFO">xpath criteria: //*[@content-desc='Send']</msg>
+<msg time="2024-12-12T14:47:16.194761" level="INFO">xpath criteria: //*[@content-desc='Send']</msg>
 <arg>${send_button}</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:00.653545" elapsed="0.776852"/>
+<status status="PASS" start="2024-12-12T14:47:15.394560" elapsed="0.800201"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:01.433460" level="INFO">Clicking element '//*[@content-desc='Send']'.</msg>
-<msg time="2024-12-12T08:50:01.697043" level="INFO">xpath criteria: //*[@content-desc='Send']</msg>
+<msg time="2024-12-12T14:47:16.194761" level="INFO">Clicking element '//*[@content-desc='Send']'.</msg>
+<msg time="2024-12-12T14:47:16.474767" level="INFO">xpath criteria: //*[@content-desc='Send']</msg>
 <arg>${send_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:01.430397" elapsed="0.266646"/>
+<status status="PASS" start="2024-12-12T14:47:16.194761" elapsed="0.280006"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:00.653545" elapsed="1.043498"/>
+<status status="PASS" start="2024-12-12T14:47:15.394560" elapsed="1.080207"/>
 </kw>
 <kw name="Verify Message Sent" owner="message">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>${MESSAGE_SENT}</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:01.697043" elapsed="2.506650"/>
+<status status="PASS" start="2024-12-12T14:47:16.474767" elapsed="2.545123"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:01.697043" elapsed="2.506650"/>
+<status status="PASS" start="2024-12-12T14:47:16.474767" elapsed="2.545123"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:49:36.513582" elapsed="27.690111"/>
+<status status="PASS" start="2024-12-12T14:46:50.634920" elapsed="28.384970"/>
 </test>
 <test id="s1-t3" name="[TC_03] Delete Contact And Delete Conversation" line="51">
 <kw name="Go To Contact App" owner="main_contact">
@@ -326,8 +326,8 @@ xpath criteria: //*[contains(@resource-id,'recipients_editor_to')]</msg>
 <arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
-<arg>appPackage=${contact_app_package}</arg>
-<arg>appActivity=${contact_app_activity}</arg>
+<arg>appPackage=${CONTACT_APP_PACKAGE}</arg>
+<arg>appActivity=${CONTACT_APP_ACTIVITY}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.1/cli/args/
@@ -335,115 +335,117 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-12-12T08:50:04.213287" elapsed="10.430338"/>
+<status status="PASS" start="2024-12-12T14:47:19.024975" elapsed="10.234598"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:04.213287" elapsed="10.430338"/>
+<status status="PASS" start="2024-12-12T14:47:19.024975" elapsed="10.234598"/>
 </kw>
 <kw name="Verify Contact App Opened" owner="main_contact">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>contact</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:14.643625" elapsed="2.050152"/>
+<status status="PASS" start="2024-12-12T14:47:29.259573" elapsed="2.120932"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:14.643625" elapsed="2.050152"/>
+<status status="PASS" start="2024-12-12T14:47:29.259573" elapsed="2.120932"/>
 </kw>
 <kw name="Click Created Contact" owner="main_contact">
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-12-12T08:50:16.703735" level="INFO">${CONTACT_NAME} = A1</msg>
+<msg time="2024-12-12T14:47:31.380505" level="INFO">${CONTACT_NAME} = Lam Oanh</msg>
 <arg>${CONTACT_NAME}</arg>
 <arg>${contact}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-12-12T08:50:16.703735" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-12T14:47:31.380505" elapsed="0.000000"/>
 </kw>
-<kw name="Get Created Contact" owner="main_contact_dynamic_loc">
-<msg time="2024-12-12T08:50:16.703735" level="INFO">${created_contact} = //*[@content-desc='A1']</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-12T14:47:31.384526" level="INFO">${created_contact} = //*[@content-desc='Lam Oanh']</msg>
 <var>${created_contact}</var>
-<arg>${contact}</arg>
-<status status="PASS" start="2024-12-12T08:50:16.703735" elapsed="0.000000"/>
+<arg>//*[@content-desc='${contact}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-12T14:47:31.384526" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:17.848598" level="INFO">xpath criteria: //*[@content-desc='A1']</msg>
+<msg time="2024-12-12T14:47:32.552069" level="INFO">xpath criteria: //*[@content-desc='Lam Oanh']</msg>
 <arg>${created_contact}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:16.703735" elapsed="1.149981"/>
+<status status="PASS" start="2024-12-12T14:47:31.384526" elapsed="1.167659"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:17.854256" level="INFO">Clicking element '//*[@content-desc='A1']'.</msg>
-<msg time="2024-12-12T08:50:18.273539" level="INFO">xpath criteria: //*[@content-desc='A1']</msg>
+<msg time="2024-12-12T14:47:32.554735" level="INFO">Clicking element '//*[@content-desc='Lam Oanh']'.</msg>
+<msg time="2024-12-12T14:47:32.959472" level="INFO">xpath criteria: //*[@content-desc='Lam Oanh']</msg>
 <arg>${created_contact}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:17.854256" elapsed="0.419283"/>
+<status status="PASS" start="2024-12-12T14:47:32.552185" elapsed="0.407287"/>
 </kw>
 <arg>${CONTACT_NAME}</arg>
-<status status="PASS" start="2024-12-12T08:50:16.703735" elapsed="1.580030"/>
+<status status="PASS" start="2024-12-12T14:47:31.380505" elapsed="1.578967"/>
 </kw>
 <kw name="Click More Option Contact" owner="contact">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:18.823447" level="INFO">xpath criteria: //*[@content-desc='More options']</msg>
+<msg time="2024-12-12T14:47:33.564737" level="INFO">xpath criteria: //*[@content-desc='More options']</msg>
 <arg>${more_option}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:18.283765" elapsed="0.539682"/>
+<status status="PASS" start="2024-12-12T14:47:32.964534" elapsed="0.600203"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:18.833246" level="INFO">Clicking element '//*[@content-desc='More options']'.</msg>
-<msg time="2024-12-12T08:50:20.313706" level="INFO">xpath criteria: //*[@content-desc='More options']</msg>
+<msg time="2024-12-12T14:47:33.574611" level="INFO">Clicking element '//*[@content-desc='More options']'.</msg>
+<msg time="2024-12-12T14:47:34.964819" level="INFO">xpath criteria: //*[@content-desc='More options']</msg>
 <arg>${more_option}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:18.823447" elapsed="1.490259"/>
+<status status="PASS" start="2024-12-12T14:47:33.564737" elapsed="1.400082"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:18.283765" elapsed="2.029941"/>
+<status status="PASS" start="2024-12-12T14:47:32.959472" elapsed="2.005347"/>
 </kw>
 <kw name="Click Delete Contact Option" owner="contact">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:20.833766" level="INFO">xpath criteria: //*[@text='Delete']</msg>
+<msg time="2024-12-12T14:47:35.483971" level="INFO">xpath criteria: //*[@text='Delete']</msg>
 <arg>${delete_contact_option}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:20.313706" elapsed="0.520060"/>
+<status status="PASS" start="2024-12-12T14:47:34.964819" elapsed="0.527466"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:20.843410" level="INFO">Clicking element '//*[@text='Delete']'.</msg>
-<msg time="2024-12-12T08:50:22.364560" level="INFO">xpath criteria: //*[@text='Delete']</msg>
+<msg time="2024-12-12T14:47:35.499929" level="INFO">Clicking element '//*[@text='Delete']'.</msg>
+<msg time="2024-12-12T14:47:37.014651" level="INFO">xpath criteria: //*[@text='Delete']</msg>
 <arg>${delete_contact_option}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:20.833766" elapsed="1.530794"/>
+<status status="PASS" start="2024-12-12T14:47:35.492285" elapsed="1.522366"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:20.313706" elapsed="2.050854"/>
+<status status="PASS" start="2024-12-12T14:47:34.964819" elapsed="2.049832"/>
 </kw>
 <kw name="Click Confirm Delete Button" owner="contact">
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:22.545702" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
+<msg time="2024-12-12T14:47:37.254752" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
 <arg>${confirm_contact_delete_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:22.373642" elapsed="0.172060"/>
+<status status="PASS" start="2024-12-12T14:47:37.014651" elapsed="0.240101"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:22.551090" level="INFO">Clicking element '//*[contains(@resource-id,'button1')]'.</msg>
-<msg time="2024-12-12T08:50:22.753785" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
+<msg time="2024-12-12T14:47:37.254752" level="INFO">Clicking element '//*[contains(@resource-id,'button1')]'.</msg>
+<msg time="2024-12-12T14:47:37.434755" level="INFO">xpath criteria: //*[contains(@resource-id,'button1')]</msg>
 <arg>${confirm_contact_delete_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:22.545702" elapsed="0.208083"/>
+<status status="PASS" start="2024-12-12T14:47:37.254752" elapsed="0.180003"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:22.364560" elapsed="0.389225"/>
+<status status="PASS" start="2024-12-12T14:47:37.014651" elapsed="0.420104"/>
 </kw>
 <kw name="Verify Contact Deleted" owner="main_contact">
-<kw name="Get Created Contact" owner="main_contact_dynamic_loc">
-<msg time="2024-12-12T08:50:22.753785" level="INFO">${created_contact} = //*[@content-desc='A1']</msg>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-12T14:47:37.434755" level="INFO">${created_contact} = //*[@content-desc='Lam Oanh']</msg>
 <var>${created_contact}</var>
-<arg>${CONTACT_NAME}</arg>
-<status status="PASS" start="2024-12-12T08:50:22.753785" elapsed="0.000000"/>
+<arg>//*[@content-desc='${CONTACT_NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-12T14:47:37.434755" elapsed="0.000000"/>
 </kw>
 <kw name="Page Should Not Contain Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:23.413273" level="INFO">Current page not contains element '//*[@content-desc='A1']'.</msg>
-<msg time="2024-12-12T08:50:23.413273" level="INFO">xpath criteria: //*[@content-desc='A1']</msg>
+<msg time="2024-12-12T14:47:38.223375" level="INFO">Current page not contains element '//*[@content-desc='Lam Oanh']'.</msg>
+<msg time="2024-12-12T14:47:38.223375" level="INFO">xpath criteria: //*[@content-desc='Lam Oanh']</msg>
 <arg>${created_contact}</arg>
 <doc>Verifies that current page not contains `locator` element.</doc>
-<status status="PASS" start="2024-12-12T08:50:22.753785" elapsed="0.659488"/>
+<status status="PASS" start="2024-12-12T14:47:37.448448" elapsed="0.774927"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:22.753785" elapsed="0.659488"/>
+<status status="PASS" start="2024-12-12T14:47:37.434755" elapsed="0.788620"/>
 </kw>
 <kw name="Go To Message App" owner="main_message">
 <kw name="Open Application" owner="AppiumLibrary">
@@ -452,8 +454,8 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <arg>platformVersion=${PLATFORM_VERSION}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
-<arg>appPackage=${message_app_package}</arg>
-<arg>appActivity=${message_app_activity}</arg>
+<arg>appPackage=${MESSAGE_APP_PACKAGE}</arg>
+<arg>appActivity=${MESSAGE_APP_ACTIVITY}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.1/cli/args/
@@ -461,147 +463,147 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-12-12T08:50:23.413273" elapsed="12.170446"/>
+<status status="PASS" start="2024-12-12T14:47:38.223375" elapsed="11.991334"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:23.413273" elapsed="12.170446"/>
+<status status="PASS" start="2024-12-12T14:47:38.223375" elapsed="11.991334"/>
 </kw>
 <kw name="Verify Message App Opened" owner="main_message">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>Messages</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2024-12-12T08:50:35.593674" elapsed="1.829896"/>
+<status status="PASS" start="2024-12-12T14:47:50.214709" elapsed="1.941125"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:35.583719" elapsed="1.839851"/>
+<status status="PASS" start="2024-12-12T14:47:50.214709" elapsed="1.941125"/>
 </kw>
 <kw name="Click Created Message By Number" owner="main_message">
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-12-12T08:50:37.423570" level="INFO">${NUMBER} = 0123456</msg>
+<msg time="2024-12-12T14:47:52.155834" level="INFO">${NUMBER} = 0123456</msg>
 <arg>${NUMBER}</arg>
 <arg>${num}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-12-12T08:50:37.423570" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-12T14:47:52.155834" elapsed="0.000000"/>
 </kw>
 <kw name="Get Message By Number" owner="main_message_dynamic_loc">
-<msg time="2024-12-12T08:50:37.423570" level="INFO">${created_message_by_number} = //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
+<msg time="2024-12-12T14:47:52.155834" level="INFO">${created_message_by_number} = //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
 <var>${created_message_by_number}</var>
 <arg>${num}</arg>
-<status status="PASS" start="2024-12-12T08:50:37.423570" elapsed="0.000000"/>
+<status status="PASS" start="2024-12-12T14:47:52.155834" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:42.863308" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']
+<msg time="2024-12-12T14:47:57.443338" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']
 xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']
 xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']
 xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
 <arg>${created_message_by_number}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:37.423570" elapsed="5.439738"/>
+<status status="PASS" start="2024-12-12T14:47:52.155834" elapsed="5.287504"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:42.863308" level="INFO">Clicking element '//*[@content-desc='0 1 2 3 4 5 6 ']'.</msg>
-<msg time="2024-12-12T08:50:43.303384" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
+<msg time="2024-12-12T14:47:57.451338" level="INFO">Clicking element '//*[@content-desc='0 1 2 3 4 5 6 ']'.</msg>
+<msg time="2024-12-12T14:47:57.864402" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
 <arg>${created_message_by_number}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:42.863308" elapsed="0.440076"/>
+<status status="PASS" start="2024-12-12T14:47:57.443338" elapsed="0.421064"/>
 </kw>
 <arg>${CONTACT_NUM}</arg>
-<status status="PASS" start="2024-12-12T08:50:37.423570" elapsed="5.879814"/>
+<status status="PASS" start="2024-12-12T14:47:52.155834" elapsed="5.708568"/>
 </kw>
 <kw name="Click Conversation Setting" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:45.873599" level="INFO">xpath criteria: //*[@content-desc='Conversation settings']
+<msg time="2024-12-12T14:48:00.394304" level="INFO">xpath criteria: //*[@content-desc='Conversation settings']
 xpath criteria: //*[@content-desc='Conversation settings']</msg>
 <arg>${conversation_setting}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:43.303384" elapsed="2.570215"/>
+<status status="PASS" start="2024-12-12T14:47:57.873430" elapsed="2.520874"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:45.873599" level="INFO">Clicking element '//*[@content-desc='Conversation settings']'.</msg>
-<msg time="2024-12-12T08:50:46.304943" level="INFO">xpath criteria: //*[@content-desc='Conversation settings']</msg>
+<msg time="2024-12-12T14:48:00.394304" level="INFO">Clicking element '//*[@content-desc='Conversation settings']'.</msg>
+<msg time="2024-12-12T14:48:00.914356" level="INFO">xpath criteria: //*[@content-desc='Conversation settings']</msg>
 <arg>${conversation_setting}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:45.873599" elapsed="0.431344"/>
+<status status="PASS" start="2024-12-12T14:48:00.394304" elapsed="0.520052"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:43.303384" elapsed="3.001559"/>
+<status status="PASS" start="2024-12-12T14:47:57.864402" elapsed="3.049954"/>
 </kw>
 <kw name="Choose Delete Message" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:47.403840" level="INFO">xpath criteria: //*[@text='Delete message']</msg>
+<msg time="2024-12-12T14:48:02.034593" level="INFO">xpath criteria: //*[@text='Delete message']</msg>
 <arg>${delete_message}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:46.316738" elapsed="1.087102"/>
+<status status="PASS" start="2024-12-12T14:48:00.924288" elapsed="1.110305"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:47.408401" level="INFO">Clicking element '//*[@text='Delete message']'.</msg>
-<msg time="2024-12-12T08:50:47.933475" level="INFO">xpath criteria: //*[@text='Delete message']</msg>
+<msg time="2024-12-12T14:48:02.034593" level="INFO">Clicking element '//*[@text='Delete message']'.</msg>
+<msg time="2024-12-12T14:48:02.584517" level="INFO">xpath criteria: //*[@text='Delete message']</msg>
 <arg>${delete_message}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:47.403840" elapsed="0.529635"/>
+<status status="PASS" start="2024-12-12T14:48:02.034593" elapsed="0.549924"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:46.314550" elapsed="1.618925"/>
+<status status="PASS" start="2024-12-12T14:48:00.923243" elapsed="1.661274"/>
 </kw>
 <kw name="Click Delete Button" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:49.574202" level="INFO">xpath criteria: //*[@content-desc='Delete, Button']</msg>
+<msg time="2024-12-12T14:48:04.233351" level="INFO">xpath criteria: //*[@content-desc='Delete, Button']</msg>
 <arg>${delete_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:47.933475" elapsed="1.649860"/>
+<status status="PASS" start="2024-12-12T14:48:02.584517" elapsed="1.648834"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:49.583335" level="INFO">Clicking element '//*[@content-desc='Delete, Button']'.</msg>
-<msg time="2024-12-12T08:50:49.823963" level="INFO">xpath criteria: //*[@content-desc='Delete, Button']</msg>
+<msg time="2024-12-12T14:48:04.233351" level="INFO">Clicking element '//*[@content-desc='Delete, Button']'.</msg>
+<msg time="2024-12-12T14:48:04.531579" level="INFO">xpath criteria: //*[@content-desc='Delete, Button']</msg>
 <arg>${delete_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:49.583335" elapsed="0.240628"/>
+<status status="PASS" start="2024-12-12T14:48:04.233351" elapsed="0.298228"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:47.933475" elapsed="1.890488"/>
+<status status="PASS" start="2024-12-12T14:48:02.584517" elapsed="1.947062"/>
 </kw>
 <kw name="Click Confirm Delete Message" owner="message">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:50.823364" level="INFO">xpath criteria: //*[@resource-id='android:id/button1']
+<msg time="2024-12-12T14:48:05.484258" level="INFO">xpath criteria: //*[@resource-id='android:id/button1']
 xpath criteria: //*[@resource-id='android:id/button1']</msg>
 <arg>${confirm_message_delete_button}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2024-12-12T08:50:49.823963" elapsed="0.999401"/>
+<status status="PASS" start="2024-12-12T14:48:04.534611" elapsed="0.949647"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:50.823364" level="INFO">Clicking element '//*[@resource-id='android:id/button1']'.</msg>
-<msg time="2024-12-12T08:50:51.016266" level="INFO">xpath criteria: //*[@resource-id='android:id/button1']</msg>
+<msg time="2024-12-12T14:48:05.484258" level="INFO">Clicking element '//*[@resource-id='android:id/button1']'.</msg>
+<msg time="2024-12-12T14:48:05.651698" level="INFO">xpath criteria: //*[@resource-id='android:id/button1']</msg>
 <arg>${confirm_message_delete_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-12-12T08:50:50.823364" elapsed="0.192902"/>
+<status status="PASS" start="2024-12-12T14:48:05.484258" elapsed="0.167440"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:49.823963" elapsed="1.192303"/>
+<status status="PASS" start="2024-12-12T14:48:04.531579" elapsed="1.120119"/>
 </kw>
 <kw name="Verify Message Deleted" owner="main_message">
 <kw name="Get Message By Number" owner="main_message_dynamic_loc">
-<msg time="2024-12-12T08:50:51.028269" level="INFO">${created_message_by_number} = //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
+<msg time="2024-12-12T14:48:05.654725" level="INFO">${created_message_by_number} = //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
 <var>${created_message_by_number}</var>
 <arg>${NUMBER}</arg>
-<status status="PASS" start="2024-12-12T08:50:51.026264" elapsed="0.002005"/>
+<status status="PASS" start="2024-12-12T14:48:05.654725" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-12T08:50:56.028941" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-12-12T14:48:10.684605" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-12T08:50:51.028269" elapsed="5.000672"/>
+<status status="PASS" start="2024-12-12T14:48:05.654725" elapsed="5.029880"/>
 </kw>
 <kw name="Page Should Not Contain Element" owner="AppiumLibrary">
-<msg time="2024-12-12T08:50:56.243559" level="INFO">Current page not contains element '//*[@content-desc='0 1 2 3 4 5 6 ']'.</msg>
-<msg time="2024-12-12T08:50:56.243559" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
+<msg time="2024-12-12T14:48:10.960397" level="INFO">Current page not contains element '//*[@content-desc='0 1 2 3 4 5 6 ']'.</msg>
+<msg time="2024-12-12T14:48:10.960397" level="INFO">xpath criteria: //*[@content-desc='0 1 2 3 4 5 6 ']</msg>
 <arg>${created_message_by_number}</arg>
 <doc>Verifies that current page not contains `locator` element.</doc>
-<status status="PASS" start="2024-12-12T08:50:56.028941" elapsed="0.214618"/>
+<status status="PASS" start="2024-12-12T14:48:10.684605" elapsed="0.275792"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:51.023471" elapsed="5.220088"/>
+<status status="PASS" start="2024-12-12T14:48:05.651698" elapsed="5.308699"/>
 </kw>
-<status status="PASS" start="2024-12-12T08:50:04.213287" elapsed="52.030272"/>
+<status status="PASS" start="2024-12-12T14:47:19.024975" elapsed="51.935422"/>
 </test>
-<status status="PASS" start="2024-12-12T08:49:09.954857" elapsed="106.298846"/>
+<status status="PASS" start="2024-12-12T14:46:25.463772" elapsed="105.496625"/>
 </suite>
 <statistics>
 <total>

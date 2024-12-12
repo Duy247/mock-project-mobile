@@ -1,7 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
 Variables    ../../locator/add_contact/add_contact_loc.py
-Library    ../../locator/add_contact/add_contact_dynamic_loc.py
 
 *** Keywords ***
 Input Name
@@ -22,7 +21,7 @@ Click Save
 
 Verify Contact Added
     [Arguments]    ${name_check}    ${phone_check}
-    ${contact_name} =    Get Contact Name    ${name_check}
-    ${contact_phone} =    Get Contact Phone    ${phone_check}
+    ${contact_name}    Set Variable    //*[contains(@resource-id,'header') and @text='${name_check}']
+    ${contact_phone}    Set Variable    //*[contains(@resource-id,'display_number') and @text='${phone_check}']
     Wait Until Element Is Visible    ${contact_name}
     Wait Until Element Is Visible    ${contact_phone}

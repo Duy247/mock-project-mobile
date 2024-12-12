@@ -7,9 +7,9 @@ Resource    ../app/Message/screen/main/main_message.robot
 Resource    ../app//Message/screen/message/message.robot
 
 *** Variables ***   
-${CONTACT_NAME}    A1
+${CONTACT_NAME}    Lam Oanh
 ${CONTACT_NUM}    0123456
-${SEND_MESSAGE}    Hello
+${SEND_MESSAGE}    Hello Oanh
 
 *** Test Cases ***
 [TC_01] Create New Contact
