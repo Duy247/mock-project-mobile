@@ -3,7 +3,6 @@ contact_search_result = "//*[contains(@resource-id,'bubble_list_view')]/android.
 
 message_field= "//*[@resource-id='com.samsung.android.messaging:id/message_edit_text']"
 send_button = "//*[@content-desc='Send']"
-hello_message = "//*[@text='Hello']"
 
 conversation_setting = "//*[@content-desc='Conversation settings']"
 delete_message = "//*[@text='Delete message']"

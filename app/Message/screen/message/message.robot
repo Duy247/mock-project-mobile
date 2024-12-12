@@ -3,17 +3,20 @@ Library    AppiumLibrary
 Variables    ../../locator/message/message_loc.py
 
 *** Keywords ***
-Input Recipient 0123456
+Input Recipient Number
+    [Arguments]    ${recipient_num}
     Wait Until Element Is Visible    xpath=${recipient_field}
-    Input Text    xpath=${recipient_field}    0123456
+    Input Text    xpath=${recipient_field}    ${recipient_num}
     Wait Until Element Is Visible    xpath=${contact_search_result}
     Click Element    xpath=${contact_search_result}
 
-Verify Recipient Named A1
-    Page Should Contain Text    A1
+Verify Recipient Named
+    [Arguments]    ${recipient_name}
+    Page Should Contain Text    ${recipient_name}
 
 Input Text For Message
     [Arguments]    ${message}
+    Set Global Variable    ${MESSAGE_SENT}    ${message}
     Wait Until Element Is Visible    xpath=${message_field}
     Input Text    xpath=${message_field}    ${message}
 
@@ -22,7 +25,7 @@ Click Send Button
     Click Element    xpath=${send_button}
 
 Verify Message Sent
-    Wait Until Element Is Visible    xpath=${hello_message}    timeout=10s
+    Wait Until Page Contains    ${MESSAGE_SENT}
 
 Click Conversation Setting
     Wait Until Element Is Visible    xpath=${conversation_setting}    timeout=10s

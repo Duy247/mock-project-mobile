@@ -19,3 +19,5 @@ Update 2: Merge in test case 1 and test case 2 for Android Emulator Device Andro
 Update 3: Rewrite test case 1 & 2 for Samsung A7 2018 Android 9
 
 Update 4: Merge 3 robot file into 1 single test suite
+
+Update 5: Add dynamic locator for created contact and message
