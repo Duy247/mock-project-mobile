@@ -29,7 +29,7 @@ Click Created Message By Number
     [Arguments]    ${num}
     ${formatted_number} =    Format Number    ${num}    
     ${created_message_loc}    Set Variable    //*[@content-desc='${formatted_number}']
-    Set Global Variable    ${CREATED_MESSAGE_LOC}    ${created_message_loc}
+    Set Suite Variable    ${CREATED_MESSAGE_LOC}    ${created_message_loc}
     Wait Until Element Is Visible    ${created_message_loc}    timeout=10s
     Click Element    ${created_message_loc}
 

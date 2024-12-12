@@ -16,7 +16,7 @@ Verify Recipient Named
 
 Input Text For Message
     [Arguments]    ${message}
-    Set Global Variable    ${MESSAGE_SENT}    ${message}
+    Set Suite Variable    ${MESSAGE_SENT}    ${message}
     Wait Until Element Is Visible    ${message_field}
     Input Text    ${message_field}    ${message}
 

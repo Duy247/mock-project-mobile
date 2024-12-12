@@ -33,7 +33,7 @@ Click Save To Phone
 Click Created Contact
     [Arguments]    ${contact}
     ${created_contact_loc}    Set Variable    //*[@content-desc='${contact}']
-    Set Global Variable    ${CONTACT_LOC}    ${created_contact_loc}
+    Set Suite Variable    ${CONTACT_LOC}    ${created_contact_loc}
     Wait Until Element Is Visible    ${created_contact_loc}    timeout=10s
     Click Element    ${created_contact_loc}
     
