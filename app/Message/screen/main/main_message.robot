@@ -22,17 +22,17 @@ Verify Message App Opened
     Wait Until Page Contains    Messages
     
 Create New Conversation
-    Wait Until Element Is Visible    xpath=${create_new_message}
-    Click Element    xpath=${create_new_message}
+    Wait Until Element Is Visible    ${create_new_message}
+    Click Element    ${create_new_message}
 
 Click Created Message By Number
     [Arguments]    ${num}
     Set Global Variable    ${NUMBER}    ${num}
     ${created_message_by_number} =    Get Message By Number    ${num}
-    Wait Until Element Is Visible    xpath=${created_message_by_number}    timeout=10s
-    Click Element    xpath=${created_message_by_number}
+    Wait Until Element Is Visible    ${created_message_by_number}    timeout=10s
+    Click Element    ${created_message_by_number}
 
 Verify Message Deleted
     ${created_message_by_number} =    Get Message By Number    ${NUMBER}
     Sleep    5s
-    Page Should Not Contain Element    xpath=${created_message_by_number}
+    Page Should Not Contain Element    ${created_message_by_number}

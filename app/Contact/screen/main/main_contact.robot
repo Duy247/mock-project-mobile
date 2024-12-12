@@ -22,23 +22,23 @@ Verify Contact App Opened
     Wait Until Page Contains    contact
 
 Click Add Contact
-    Wait Until Element Is Visible    xpath=${add_contact_button}    timeout=10s
-    Click Element    xpath=${add_contact_button}
+    Wait Until Element Is Visible    ${add_contact_button}    timeout=10s
+    Click Element    ${add_contact_button}
 
 Click Save To Phone
-    Wait Until Element Is Visible    xpath=${save_to_phone}    timeout=10s
-    Click Element    xpath=${save_to_phone}
-    Wait Until Element Is Visible    xpath=${set_save_button}    timeout=10s
-    Click Element    xpath=${set_save_button}
+    Wait Until Element Is Visible    ${save_to_phone}    timeout=10s
+    Click Element    ${save_to_phone}
+    Wait Until Element Is Visible    ${set_save_button}    timeout=10s
+    Click Element    ${set_save_button}
 
 Click Created Contact
     [Arguments]    ${contact}
     Set Global Variable    ${CONTACT_NAME}    ${contact}
     ${created_contact} =    Get Created Contact    ${contact}    
-    Wait Until Element Is Visible    xpath=${created_contact}    timeout=10s
-    Click Element    xpath=${created_contact}
+    Wait Until Element Is Visible    ${created_contact}    timeout=10s
+    Click Element    ${created_contact}
     
 Verify Contact Deleted
     ${created_contact} =    Get Created Contact    ${CONTACT_NAME} 
-    Page Should Not Contain Element    xpath=${created_contact}
+    Page Should Not Contain Element    ${created_contact}
 
