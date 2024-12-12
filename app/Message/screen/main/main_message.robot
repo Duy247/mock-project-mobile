@@ -9,12 +9,14 @@ ${PLATFORM_NAME}    Android
 ${PLATFORM_VERSION}    9
 ${DEVICE_NAME}    32006e3ac01f9573
 ${ANDROID_AUTOMATION_NAME}    UiAutomator2
+${MESSAGE_APP_PACKAGE}    com.samsung.android.messaging
+${MESSAGE_APP_ACTIVITY}    com.android.mms.ui.ConversationComposer
 
 *** Keywords ***
 Go To Message App
     Open Application    ${APPIUM_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    
     ...    automationName=${ANDROID_AUTOMATION_NAME}    
-    ...    appPackage=${message_app_package}    appActivity=${message_app_activity}   
+    ...    appPackage=${MESSAGE_APP_PACKAGE}   appActivity=${MESSAGE_APP_ACTIVITY} 
 
 Verify Message App Opened
     Wait Until Page Contains    Messages
